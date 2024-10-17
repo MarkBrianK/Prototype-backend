@@ -10,9 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_17_095136) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_17_102325) do
   create_table "documents", force: :cascade do |t|
     t.string "link"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.string "description"
+    t.string "string"
+    t.date "date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messagers", force: :cascade do |t|
+    t.string "message"
+    t.string "string"
+    t.date "date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.date "sale_date"
+    t.integer "sale_amount"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
