@@ -5,6 +5,10 @@ ruby "3.2.0"
 gem "devise"
 gem "bcrypt"
 gem 'rack-cors'
+gem 'actioncable'
+gem 'twilio-ruby'
+gem 'cloudinary'
+
 
 gem "pg", "~> 1.1"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
